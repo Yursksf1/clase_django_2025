@@ -33,3 +33,19 @@ pip install django
 ```
 pip install -r requirements.txt
 ```
+
+### crear nuevo proyecto 
+```
+django-admin startproject mysite .
+```
+esto me crea la estructura del proyecto inicial
+
+
+```
+mysite/__init__.py 
+mysite/asgi.py 
+mysite/settings.py 
+mysite/urls.py 
+mysite/wsgi.py 
+manage.py
+```
