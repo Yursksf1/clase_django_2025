@@ -49,3 +49,8 @@ mysite/urls.py
 mysite/wsgi.py 
 manage.py
 ```
+
+### activar el servidor
+```
+python manage.py runserver
+```
