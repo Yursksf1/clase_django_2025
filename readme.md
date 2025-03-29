@@ -12,6 +12,7 @@
 virtualenv venv
 ```
 
+
 ### Activar el entorno virtual
 ```
 \venv\Scripts\activate
@@ -19,6 +20,8 @@ virtualenv venv
 importante notar que en la consola aparece el nombre entre parentesis 
 
 (venv) C:\Users\Usuario\Dev\clase_django_2025>
+
+para desactivar el entorno virtual usamos el comando `deactivate`
 
 
 ### ver las librerias instaladas
