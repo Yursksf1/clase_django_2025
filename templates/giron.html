@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Girón - AMB</title>
+    <!-- Bootstrap CSS -->
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/bootstrap/5.3.0/css/bootstrap.min.css" rel="stylesheet">
+    <style>
+        .hero-section {
+            background-image: url('/api/placeholder/1200/400');
+            background-size: cover;
+            background-position: center;
+            color: white;
+            padding: 100px 0;
+            text-shadow: 2px 2px 4px rgba(0,0,0,0.7);
+        }
+        
+        .section {
+            padding: 60px 0;
+        }
+        
+        .section-alt {
+            background-color: #f8f9fa;
+        }
+        
+        .city-info-card {
+            border-radius: 10px;
+            overflow: hidden;
+            box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+            margin-bottom: 20px;
+        }
+        
+        .city-info-card img {
+            width: 100%;
+            height: 200px;
+            object-fit: cover;
+        }
+        
+        footer {
+            background-color: #343a40;
+            color: white;
+            padding: 30px 0;
+        }
+    </style>
+</head>
+<body>
+    <!-- Navbar -->
+    <nav class="navbar navbar-expand-lg navbar-dark bg-dark sticky-top">
+        <div class="container">
+            <a class="navbar-brand" href="#">AMB</a>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarNav">
+                <ul class="navbar-nav">
+                    <li class="nav-item dropdown">
+                        <a class="nav-link dropdown-toggle active" href="#" id="navbarDropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+                            Municipios
+                        </a>
+                        <ul class="dropdown-menu" aria-labelledby="navbarDropdown">
+                            <li><a class="dropdown-item" href="bucaramanga.html">Bucaramanga</a></li>
+                            <li><a class="dropdown-item" href="floridablanca.html">Floridablanca</a></li>
+                            <li><a class="dropdown-item active" href="#">Girón</a></li>
+                            <li><a class="dropdown-item" href="piedecuesta.html">Piedecuesta</a></li>
+                        </ul>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Hero Section -->
+    <header class="hero-section">
+        <div class="container text-center">
+            <h1 class="display-4">Girón</h1>
+            <p class="lead">Villa de los Caballeros y Monumento Nacional</p>
+        </div>
+    </header>
+
+    <!-- Information Section -->
+    <section class="section">
+        <div class="container">
+            <div class="row">
+                <div class="col-md-8">
+                    <h2>Acerca de Girón</h2>
+                    <p>San Juan de Girón, comúnmente conocido como Girón, es un municipio del departamento de Santander y forma parte del Área Metropolitana de Bucaramanga. Su centro histórico fue declarado Monumento Nacional en 1963 debido a su arquitectura colonial bien conservada, plazas y calles empedradas.</p>
+                    
+                    <h3 class="mt-4">Historia</h3>
+                    <p>Fundado el 15 de enero de 1631 por Francisco Mantilla de los Ríos, Girón fue un importante punto comercial y de tránsito durante la época colonial. Su ubicación estratégica a orillas del río de Oro le permitió desarrollarse como centro de intercambio entre diferentes regiones. A lo largo de los siglos, ha mantenido su importancia histórica y cultural.</p>
+                </div>
+                <div class="col-md-4">
+                    <div class="city-info-card">
+                        <img src="/api/placeholder/600/400" alt="Plaza Principal de Girón">
+                        <div class="card-body">
+                            <h5 class="card-title">Plaza Principal</h5>

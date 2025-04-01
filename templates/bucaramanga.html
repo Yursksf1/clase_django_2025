@@ -1,0 +1,285 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Bucaramanga - AMB</title>
+    <!-- Bootstrap CSS -->
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/bootstrap/5.3.0/css/bootstrap.min.css" rel="stylesheet">
+    <style>
+        .hero-section {
+            background-image: url('/api/placeholder/1200/400');
+            background-size: cover;
+            background-position: center;
+            color: white;
+            padding: 100px 0;
+            text-shadow: 2px 2px 4px rgba(0,0,0,0.7);
+        }
+        
+        .section {
+            padding: 60px 0;
+        }
+        
+        .section-alt {
+            background-color: #f8f9fa;
+        }
+        
+        .city-info-card {
+            border-radius: 10px;
+            overflow: hidden;
+            box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+            margin-bottom: 20px;
+        }
+        
+        .city-info-card img {
+            width: 100%;
+            height: 200px;
+            object-fit: cover;
+        }
+        
+        footer {
+            background-color: #343a40;
+            color: white;
+            padding: 30px 0;
+        }
+    </style>
+</head>
+<body>
+    <!-- Navbar -->
+    <nav class="navbar navbar-expand-lg navbar-dark bg-dark sticky-top">
+        <div class="container">
+            <a class="navbar-brand" href="#">AMB</a>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarNav">
+                <ul class="navbar-nav">
+                    <li class="nav-item dropdown">
+                        <a class="nav-link dropdown-toggle active" href="#" id="navbarDropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+                            Municipios
+                        </a>
+                        <ul class="dropdown-menu" aria-labelledby="navbarDropdown">
+                            <li><a class="dropdown-item active" href="#">Bucaramanga</a></li>
+                            <li><a class="dropdown-item" href="floridablanca.html">Floridablanca</a></li>
+                            <li><a class="dropdown-item" href="giron.html">Girón</a></li>
+                            <li><a class="dropdown-item" href="piedecuesta.html">Piedecuesta</a></li>
+                        </ul>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Hero Section -->
+    <header class="hero-section">
+        <div class="container text-center">
+            <h1 class="display-4">Bucaramanga</h1>
+            <p class="lead">La Ciudad Bonita de Colombia</p>
+        </div>
+    </header>
+
+    <!-- Information Section -->
+    <section class="section">
+        <div class="container">
+            <div class="row">
+                <div class="col-md-8">
+                    <h2>Acerca de Bucaramanga</h2>
+                    <p>Bucaramanga es la capital del departamento de Santander, Colombia. Conocida como "La Ciudad de los Parques" o "La Ciudad Bonita", se caracteriza por sus numerosos espacios verdes y su agradable clima primaveral durante todo el año.</p>
+                    
+                    <h3 class="mt-4">Historia</h3>
+                    <p>Fundada el 22 de diciembre de 1622 por el español Andrés Páez de Sotomayor, Bucaramanga ha sido un importante centro comercial y cultural del oriente colombiano. Su desarrollo histórico estuvo impulsado por la producción agrícola, especialmente del tabaco y el café.</p>
+                </div>
+                <div class="col-md-4">
+                    <div class="city-info-card">
+                        <img src="/api/placeholder/600/400" alt="Parque Santander Bucaramanga">
+                        <div class="card-body">
+                            <h5 class="card-title">Parque Santander</h5>
+                            <p class="card-text">Uno de los principales parques del centro histórico de Bucaramanga.</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Population Section -->
+    <section class="section section-alt">
+        <div class="container">
+            <h2 class="text-center mb-5">Información Poblacional</h2>
+            <div class="row">
+                <div class="col-md-6">
+                    <div class="card mb-4">
+                        <div class="card-body">
+                            <h4 class="card-title">Datos Demográficos</h4>
+                            <ul class="list-group list-group-flush">
+                                <li class="list-group-item d-flex justify-content-between align-items-center">
+                                    Población Total
+                                    <span class="badge bg-primary rounded-pill">581,130 habitantes</span>
+                                </li>
+                                <li class="list-group-item d-flex justify-content-between align-items-center">
+                                    Área Urbana
+                                    <span class="badge bg-primary rounded-pill">565,874 habitantes</span>
+                                </li>
+                                <li class="list-group-item d-flex justify-content-between align-items-center">
+                                    Área Rural
+                                    <span class="badge bg-primary rounded-pill">15,256 habitantes</span>
+                                </li>
+                                <li class="list-group-item d-flex justify-content-between align-items-center">
+                                    Densidad Poblacional
+                                    <span class="badge bg-primary rounded-pill">2,548 hab/km²</span>
+                                </li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-6">
+                    <div class="card">
+                        <div class="card-body">
+                            <h4 class="card-title">Distribución por Edad</h4>
+                            <canvas id="ageChart" width="400" height="300"></canvas>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="row mt-4">
+                <div class="col-12">
+                    <div class="card">
+                        <div class="card-body">
+                            <h4 class="card-title">Evolución Poblacional</h4>
+                            <p>La ciudad ha experimentado un crecimiento sostenido en las últimas décadas:</p>
+                            <table class="table table-striped">
+                                <thead>
+                                    <tr>
+                                        <th>Año</th>
+                                        <th>Población</th>
+                                        <th>Tasa de Crecimiento</th>
+                                    </tr>
+                                </thead>
+                                <tbody>
+                                    <tr>
+                                        <td>2000</td>
+                                        <td>452,025</td>
+                                        <td>-</td>
+                                    </tr>
+                                    <tr>
+                                        <td>2010</td>
+                                        <td>524,112</td>
+                                        <td>1.5%</td>
+                                    </tr>
+                                    <tr>
+                                        <td>2020</td>
+                                        <td>568,496</td>
+                                        <td>0.8%</td>
+                                    </tr>
+                                    <tr>
+                                        <td>2023</td>
+                                        <td>581,130</td>
+                                        <td>0.7%</td>
+                                    </tr>
+                                </tbody>
+                            </table>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Attractions Section -->
+    <section class="section">
+        <div class="container">
+            <h2 class="text-center mb-5">Principales Atractivos</h2>
+            <div class="row">
+                <div class="col-md-4">
+                    <div class="city-info-card">
+                        <img src="/api/placeholder/600/400" alt="Parque del Agua">
+                        <div class="card-body">
+                            <h5 class="card-title">Parque del Agua</h5>
+                            <p class="card-text">Un espacio recreativo y educativo dedicado al recurso hídrico.</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-4">
+                    <div class="city-info-card">
+                        <img src="/api/placeholder/600/400" alt="Cerro del Santísimo">
+                        <div class="card-body">
+                            <h5 class="card-title">Cerro del Santísimo</h5>
+                            <p class="card-text">Monumento religioso con impresionantes vistas panorámicas.</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-4">
+                    <div class="city-info-card">
+                        <img src="/api/placeholder/600/400" alt="Cabecera">
+                        <div class="card-body">
+                            <h5 class="card-title">Zona de Cabecera</h5>
+                            <p class="card-text">Sector exclusivo con restaurantes, tiendas y vida nocturna.</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer>
+        <div class="container">
+            <div class="row">
+                <div class="col-md-6">
+                    <h4>Área Metropolitana de Bucaramanga</h4>
+                    <p>Información sobre los municipios que conforman el AMB</p>
+                </div>
+                <div class="col-md-6 text-md-end">
+                    <p>&copy; 2025 Información AMB</p>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <!-- Bootstrap JS Bundle with Popper -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/bootstrap/5.3.0/js/bootstrap.bundle.min.js"></script>
+    <!-- Chart.js for the age distribution chart -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/3.9.1/chart.min.js"></script>
+    <script>
+        // Age distribution chart
+        const ctx = document.getElementById('ageChart').getContext('2d');
+        const ageChart = new Chart(ctx, {
+            type: 'pie',
+            data: {
+                labels: ['0-14 años', '15-29 años', '30-44 años', '45-59 años', '60+ años'],
+                datasets: [{
+                    label: 'Distribución por edad',
+                    data: [18, 24, 23, 20, 15],
+                    backgroundColor: [
+                        'rgba(255, 99, 132, 0.7)',
+                        'rgba(54, 162, 235, 0.7)',
+                        'rgba(255, 206, 86, 0.7)',
+                        'rgba(75, 192, 192, 0.7)',
+                        'rgba(153, 102, 255, 0.7)'
+                    ],
+                    borderColor: [
+                        'rgba(255, 99, 132, 1)',
+                        'rgba(54, 162, 235, 1)',
+                        'rgba(255, 206, 86, 1)',
+                        'rgba(75, 192, 192, 1)',
+                        'rgba(153, 102, 255, 1)'
+                    ],
+                    borderWidth: 1
+                }]
+            },
+            options: {
+                responsive: true,
+                plugins: {
+                    legend: {
+                        position: 'right',
+                    },
+                    title: {
+                        display: true,
+                        text: 'Distribución por grupos de edad (%)'
+                    }
+                }
+            }
+        });
+    </script>
+</body>
+</html>
