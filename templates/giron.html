@@ -190,30 +190,16 @@
         <div class="container">
             <h2 class="text-center mb-5">Principales Atractivos</h2>
             <div class="row">
+                {% for parque in parques %}
                 <div class="col-md-4">
                     <div class="city-info-card">
                         <div class="card-body">
-                            <h5 class="card-title">Parque Pincipal</h5>
-                            <p class="card-text">Un espacio recreativo y educativo dedicado al recurso hídrico.</p>
+                            <h5 class="card-title"> {{ parque }} </h5>
+                            <p class="card-text">El {{ parque }} es un espacio recreativo y educativo.</p>
                         </div>
                     </div>
                 </div>
-                <div class="col-md-4">
-                    <div class="city-info-card">
-                        <div class="card-body">
-                            <h5 class="card-title">Parque las nieves</h5>
-                            <p class="card-text">Monumento religioso con impresionantes vistas panorámicas.</p>
-                        </div>
-                    </div>
-                </div>
-                <div class="col-md-4">
-                    <div class="city-info-card">
-                        <div class="card-body">
-                            <h5 class="card-title">Parque peralta</h5>
-                            <p class="card-text">Sector exclusivo con restaurantes, tiendas y vida nocturna.</p>
-                        </div>
-                    </div>
-                </div>
+                {% endfor%}
             </div>
         </div>
     </section>
