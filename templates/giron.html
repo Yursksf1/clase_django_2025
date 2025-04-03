@@ -94,3 +94,189 @@
                         <img src="/api/placeholder/600/400" alt="Plaza Principal de Girón">
                         <div class="card-body">
                             <h5 class="card-title">Plaza Principal</h5>
+                            <p class="card-text">Uno de los principales parques del centro histórico de Bucaramanga.</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Population Section -->
+    <section class="section section-alt">
+        <div class="container">
+            <h2 class="text-center mb-5">Información Poblacional</h2>
+            <div class="row">
+                <div class="col-md-6">
+                    <div class="card mb-4">
+                        <div class="card-body">
+                            <h4 class="card-title">Datos Demográficos</h4>
+                            <ul class="list-group list-group-flush">
+                                <li class="list-group-item d-flex justify-content-between align-items-center">
+                                    Población Total
+                                    <span class="badge bg-primary rounded-pill">581,130 habitantes</span>
+                                </li>
+                                <li class="list-group-item d-flex justify-content-between align-items-center">
+                                    Área Urbana
+                                    <span class="badge bg-primary rounded-pill">565,874 habitantes</span>
+                                </li>
+                                <li class="list-group-item d-flex justify-content-between align-items-center">
+                                    Área Rural
+                                    <span class="badge bg-primary rounded-pill">15,256 habitantes</span>
+                                </li>
+                                <li class="list-group-item d-flex justify-content-between align-items-center">
+                                    Densidad Poblacional
+                                    <span class="badge bg-primary rounded-pill">2,548 hab/km²</span>
+                                </li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-6">
+                    <div class="card">
+                        <div class="card-body">
+                            <h4 class="card-title">Distribución por Edad</h4>
+                            <canvas id="ageChart" width="400" height="300"></canvas>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="row mt-4">
+                <div class="col-12">
+                    <div class="card">
+                        <div class="card-body">
+                            <h4 class="card-title">Evolución Poblacional</h4>
+                            <p>La ciudad ha experimentado un crecimiento sostenido en las últimas décadas:</p>
+                            <table class="table table-striped">
+                                <thead>
+                                    <tr>
+                                        <th>Año</th>
+                                        <th>Población</th>
+                                        <th>Tasa de Crecimiento</th>
+                                    </tr>
+                                </thead>
+                                <tbody>
+                                    <tr>
+                                        <td>2000</td>
+                                        <td>452,025</td>
+                                        <td>-</td>
+                                    </tr>
+                                    <tr>
+                                        <td>2010</td>
+                                        <td>524,112</td>
+                                        <td>1.5%</td>
+                                    </tr>
+                                    <tr>
+                                        <td>2020</td>
+                                        <td>568,496</td>
+                                        <td>0.8%</td>
+                                    </tr>
+                                    <tr>
+                                        <td>2023</td>
+                                        <td>581,130</td>
+                                        <td>0.7%</td>
+                                    </tr>
+                                </tbody>
+                            </table>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Attractions Section -->
+    <section class="section">
+        <div class="container">
+            <h2 class="text-center mb-5">Principales Atractivos</h2>
+            <div class="row">
+                <div class="col-md-4">
+                    <div class="city-info-card">
+                        <div class="card-body">
+                            <h5 class="card-title">Parque Pincipal</h5>
+                            <p class="card-text">Un espacio recreativo y educativo dedicado al recurso hídrico.</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-4">
+                    <div class="city-info-card">
+                        <div class="card-body">
+                            <h5 class="card-title">Parque las nieves</h5>
+                            <p class="card-text">Monumento religioso con impresionantes vistas panorámicas.</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-4">
+                    <div class="city-info-card">
+                        <div class="card-body">
+                            <h5 class="card-title">Parque peralta</h5>
+                            <p class="card-text">Sector exclusivo con restaurantes, tiendas y vida nocturna.</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer>
+        <div class="container">
+            <div class="row">
+                <div class="col-md-6">
+                    <h4>Área Metropolitana de Bucaramanga</h4>
+                    <p>Información sobre los municipios que conforman el AMB</p>
+                </div>
+                <div class="col-md-6 text-md-end">
+                    <p>&copy; 2025 Información AMB</p>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <!-- Bootstrap JS Bundle with Popper -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/bootstrap/5.3.0/js/bootstrap.bundle.min.js"></script>
+    <!-- Chart.js for the age distribution chart -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/3.9.1/chart.min.js"></script>
+    <script>
+        // Age distribution chart
+        const ctx = document.getElementById('ageChart').getContext('2d');
+        const ageChart = new Chart(ctx, {
+            type: 'pie',
+            data: {
+                labels: ['0-14 años', '15-29 años', '30-44 años', '45-59 años', '60+ años'],
+                datasets: [{
+                    label: 'Distribución por edad',
+                    data: [18, 24, 23, 20, 15],
+                    backgroundColor: [
+                        'rgba(255, 99, 132, 0.7)',
+                        'rgba(54, 162, 235, 0.7)',
+                        'rgba(255, 206, 86, 0.7)',
+                        'rgba(75, 192, 192, 0.7)',
+                        'rgba(153, 102, 255, 0.7)'
+                    ],
+                    borderColor: [
+                        'rgba(255, 99, 132, 1)',
+                        'rgba(54, 162, 235, 1)',
+                        'rgba(255, 206, 86, 1)',
+                        'rgba(75, 192, 192, 1)',
+                        'rgba(153, 102, 255, 1)'
+                    ],
+                    borderWidth: 1
+                }]
+            },
+            options: {
+                responsive: true,
+                plugins: {
+                    legend: {
+                        position: 'right',
+                    },
+                    title: {
+                        display: true,
+                        text: 'Distribución por grupos de edad (%)'
+                    }
+                }
+            }
+        });
+    </script>
+</body>
+</html>
