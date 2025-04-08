@@ -9,3 +9,6 @@ class Park(models.Model):
     description = models.TextField(
         verbose_name="Descripcion Parque"
     )
+
+    def __str__(self):
+        return self.name

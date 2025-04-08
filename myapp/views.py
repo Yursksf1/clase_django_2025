@@ -1,23 +1,11 @@
 from django.shortcuts import render
+from myapp.models import Park
 
 # Create your views here.
 
 def index(request):
-    mensaje = "Villa de los Caballeros y Monumento Nacional 1111"
-    parques = [
-        {
-            "name": "Parque Pincipal",
-            "description": "Parque en el centro de giron con la iglesia principal"
-        },
-        {
-            "name": "Parque las nieves",
-            "description": "Parque con la iglesia de las nieves"
-        },
-        {
-            "name": "Parque peralta",
-            "description": "Parque mas tranquilo y se pueden comprar deliciosos helados!"
-        },
-    ]
+    parques =  Park.objects.all()
+    mensaje = "Villa de los Caballeros y Monumento Nacional"
     print(parques)
     
     context = {
