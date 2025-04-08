@@ -190,33 +190,16 @@
         <div class="container">
             <h2 class="text-center mb-5">Principales Atractivos</h2>
             <div class="row">
+                {% for parque in parques %}
                 <div class="col-md-4">
                     <div class="city-info-card">
-                        <img src="/api/placeholder/600/400" alt="Parque del Agua">
                         <div class="card-body">
-                            <h5 class="card-title">Parque del Agua</h5>
-                            <p class="card-text">Un espacio recreativo y educativo dedicado al recurso hídrico.</p>
+                            <h5 class="card-title"> {{ parque.name }} </h5>
+                            <p class="card-text">{{ parque.description }}</p>
                         </div>
                     </div>
                 </div>
-                <div class="col-md-4">
-                    <div class="city-info-card">
-                        <img src="/api/placeholder/600/400" alt="Cerro del Santísimo">
-                        <div class="card-body">
-                            <h5 class="card-title">Cerro del Santísimo</h5>
-                            <p class="card-text">Monumento religioso con impresionantes vistas panorámicas.</p>
-                        </div>
-                    </div>
-                </div>
-                <div class="col-md-4">
-                    <div class="city-info-card">
-                        <img src="/api/placeholder/600/400" alt="Cabecera">
-                        <div class="card-body">
-                            <h5 class="card-title">Zona de Cabecera</h5>
-                            <p class="card-text">Sector exclusivo con restaurantes, tiendas y vida nocturna.</p>
-                        </div>
-                    </div>
-                </div>
+                {% endfor%}
             </div>
         </div>
     </section>

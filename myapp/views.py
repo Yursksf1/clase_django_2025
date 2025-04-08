@@ -3,8 +3,8 @@ from myapp.models import Park
 
 # Create your views here.
 
-def index(request):
-    parques =  Park.objects.all()
+def giron(request):
+    parques =  Park.objects.filter(city='GRN').all()
     mensaje = "Villa de los Caballeros y Monumento Nacional"
     print(parques)
     
@@ -13,3 +13,13 @@ def index(request):
         "parques": parques,
     }
     return render(request, "giron.html", context)
+
+
+def bucaramanga(request):
+    parques =  Park.objects.filter(city='BUC').all()
+    print(parques)
+    
+    context = {
+        "parques": parques,
+    }
+    return render(request, "bucaramanga.html", context)

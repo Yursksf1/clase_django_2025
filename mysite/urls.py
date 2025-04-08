@@ -17,11 +17,11 @@ Including another URLconf
 from django.contrib import admin
 from django.urls import path
 from django.views.generic import TemplateView
-from myapp.views import index
+from myapp.views import giron, bucaramanga
 
 urlpatterns = [
     path('admin/', admin.site.urls),
-    path('bucaramanga/', TemplateView.as_view(template_name='bucaramanga.html')),
+    path('bucaramanga/', bucaramanga),
     path('floridablanca/', TemplateView.as_view(template_name='floridablanca.html')),
-    path('giron/', index)
+    path('giron/', giron)
 ]
