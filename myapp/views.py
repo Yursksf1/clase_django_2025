@@ -18,7 +18,7 @@ def giron(request):
 def bucaramanga(request):
     parques =  Park.objects.filter(city='BUC').all()
     history_poblations_list = []
-    history_poblations =  Historico_Poblacion.objects.order_by("year").all()
+    history_poblations =  Historico_Poblacion.objects.filter(municipio__name="Bucaramanga").order_by("year").all()
     ratio_growth = None
     previous_poblation = history_poblations[0]
     for history_poblation in history_poblations:
