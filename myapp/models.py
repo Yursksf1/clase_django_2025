@@ -20,3 +20,10 @@ class Park(models.Model):
 
     def __str__(self):
         return self.name
+
+class Historico_Poblacion(models.Model):
+    year = models.PositiveSmallIntegerField()
+    poblation = models.PositiveIntegerField()
+    
+    def __str__(self):
+        return "{}-{}".format(self.year, self.poblation)

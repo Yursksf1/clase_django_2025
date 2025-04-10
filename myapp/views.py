@@ -1,5 +1,5 @@
 from django.shortcuts import render
-from myapp.models import Park
+from myapp.models import Park, Historico_Poblacion
 
 # Create your views here.
 
@@ -17,9 +17,11 @@ def giron(request):
 
 def bucaramanga(request):
     parques =  Park.objects.filter(city='BUC').all()
+    history_poblations =  Historico_Poblacion.objects.all()
     print(parques)
     
     context = {
         "parques": parques,
+        "history_poblations": history_poblations,
     }
     return render(request, "bucaramanga.html", context)
