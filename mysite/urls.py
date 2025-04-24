@@ -22,4 +22,5 @@ from myapp.views import giron, bucaramanga
 urlpatterns = [
     path('admin/', admin.site.urls),
     path('', include('myapp.urls')),
+    path('', include('timeline.urls')),
 ]
