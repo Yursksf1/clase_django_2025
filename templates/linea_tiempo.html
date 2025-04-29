@@ -159,13 +159,33 @@
     const movieForm = document.getElementById('movieForm');
     const timeline = document.getElementById('timeline');
 
-    movieForm.addEventListener('submit', function(event) {
+    movieForm.addEventListener('submit',async function(event) {
         event.preventDefault();
 
         const ano = document.getElementById('ano').value;
         const titulo = document.getElementById('titulo').value;
         const descripcion = document.getElementById('descripcion').value;
 
+        const data = {
+          'year': ano,
+          'name': titulo,
+          'description': descripcion,
+        }
+
+        try {
+          const response = await fetch('/api/peliculas/', {
+                method: 'POST',
+                headers: {
+                    'Content-Type': 'application/json',
+                    'X-CSRFToken': getCookie('csrftoken')  // Para Django necesitas enviar el CSRF token
+                },
+                body: JSON.stringify(data)
+            });
+        } catch (error) {
+            console.error('Error en la petición:', error);
+        }
+     
+        // TODO agregar esta logica en el metodo cuando sea success
         const item = document.createElement('div');
         item.classList.add('timeline-item');
         item.innerHTML = `
@@ -182,6 +202,22 @@
         const modal = bootstrap.Modal.getInstance(document.getElementById('addMovieModal'));
         modal.hide();
     });
+
+
+    function getCookie(name) {
+        let cookieValue = null;
+        if (document.cookie && document.cookie !== '') {
+            const cookies = document.cookie.split(';');
+            for (let i = 0; i < cookies.length; i++) {
+                const cookie = cookies[i].trim();
+                if (cookie.substring(0, name.length + 1) === (name + '=')) {
+                    cookieValue = decodeURIComponent(cookie.substring(name.length + 1));
+                    break;
+                }
+            }
+        }
+        return cookieValue;
+    }
   </script>
 
 </body>

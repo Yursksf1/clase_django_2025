@@ -4,4 +4,5 @@ from timeline import views
 
 urlpatterns = [
     path('disney/',views.timeline),
+    path('api/peliculas/', views.crear_pelicula, name='crear_pelicula')
 ]
