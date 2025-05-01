@@ -1,0 +1,7 @@
+<form method="post">
+    {% csrf_token %}
+    Año: <input type="number" name="year"><br>
+    Nombre: <input type="text" name="name"><br>
+    Descripción: <textarea name="description"></textarea><br>
+    <button type="submit">Enviar POST</button>
+</form>
