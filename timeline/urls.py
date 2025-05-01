@@ -3,7 +3,7 @@ from django.views.generic import TemplateView
 from timeline import views
 
 urlpatterns = [
-    path('disney/',views.timeline),
+    path('',views.timeline),
     path('api/peliculas/', views.crear_pelicula, name='crear_pelicula'),
     
     path("timeline/get/", views.timeline_get_view, name="timeline_get"),
