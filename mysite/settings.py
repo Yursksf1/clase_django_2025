@@ -40,6 +40,7 @@ INSTALLED_APPS = [
     'django.contrib.staticfiles',
     'myapp.apps.MyappConfig',
     'timeline.apps.TimelineConfig',
+    'todo_project.apps.TodoProjectConfig',
 ]
 
 MIDDLEWARE = [
